@@ -19,9 +19,9 @@
     <div class="page-splitter">
         <div class="sidebar">
             <ul class="menuitemcontainer">
-                <li class="menuitem" ><button id="aboutButton" class="menulink" onclick="loadContent('aboutButton', 'mainpane')">about</button></li>
-                <li class="menuitem"><button id="concertButton" class="menulink">find concert</button></li>
-                <li class="menuitem"><button id="contactButton" class="menulink">contact</button></li>
+                <li class="menuitem" onclick="loadContent('aboutButton', 'mainpane', 'about.html')"><button id="aboutButton" class="menulink">about</button></li>
+                <li class="menuitem" onclick="loadContent('concertButton', 'mainpane', 'findconcert.html')"><button id="concertButton" class="menulink">find concert</button></li>
+                <li class="menuitem" onclick="loadContent('contactButton', 'mainpane', 'contact.html')"><button id="contactButton" class="menulink">contact</button></li>
             </ul>
         </div>
         <div class="header-wrapper-wrapper">
@@ -33,33 +33,8 @@
                 </header>
             </div>
         </div>
-        <div class="mainpane">
-            <div class="mainwrapper" id="mainpane">
-                <div class="paneheader">
-                    <header class="paneheader">
-                        where my beethoven at?!
-                    </header>
-                </div>
-                <div class="infotext">
-                    Have you ever on a friday night felt a desire for some good ol' Ludwig van? 
-                    After a full working week, is browsing all the countless concert venues, 
-                    in search of something to fullfil your needs, really what you want? 
-                    Or would you like a service that shows you all the forthcoming Beethoven concerts in Scandinavia's bigger cities?
-                    <br> 
-                    <br>
-                    <br>
-                    Fear no more! 
-                    <br>
-                    <br>
-                    <b><i>dude, where's my beethoven?</i></b> is here to fill that need, 
-                    by gathering future Beethoven concerts in one place. Or any other composer. 
-                    But we strongly recommend Beethoven.
-                    <br> 
-
-                </div>
-                <div class="sideinfo">
-                </div>
-            </div>
+        <div class="mainpane" id="mainpane">
+            
         </div>
 
     </div>
