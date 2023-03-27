@@ -1,0 +1,231 @@
+  html, body, div, form, fieldset, legend, label {
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+th, td {
+    text-align: left;
+    vertical-align: top;
+  }
+
+  h1, h2, h3, h4, h5, h6, th, td, caption { 
+    font-weight: normal; 
+  }
+
+  img { 
+    border: 0; 
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    background-image: url("images/background.jpg");
+  }
+
+  .bigheader {
+    grid-area: bigheader;
+    height: 200px;
+    background-color: #000000;
+    color: #fff;
+    text-align: left;
+    padding-top: 20px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .dinmamma {
+    padding-left: 150px;
+    grid-area: title;
+    font-weight: bold;
+    font-family: 'Tiro Telugu', serif;
+    font-size: 45px;
+    text-shadow: 0 0 2px #fff, 0 0 5px #5a5a5a, 0 0 10px #616161;
+    -webkit-text-stroke: 1px rgb(187, 187, 187);
+    text-stroke: 1px rgb(46, 46, 46);
+  }
+
+  .beethoven {
+    background-image: url('images/beethoven.png');
+    background-size: 100px 100px;
+    background-color: transparent;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    grid-area: beethoven;
+  }
+  .space {
+    width: 30px;
+    height: 100px;
+    float: left;
+    grid-area: space;
+  }
+
+
+  .header-wrapper {
+  display: grid;
+  grid-template-areas: 'space beethoven bigheader';
+  } 
+
+  .page-splitter {
+    display: grid;
+    grid-template-areas: 'header-wrapper-wrapper sidebar mainpane';
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr 2fr; 
+
+  }
+
+  .header-wrapper-wrapper {
+    grid-area: header-wrapper-wrapper;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    width: 30%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+  }
+
+  .menuitemcontainer {
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    padding-left: 20%;
+    height: 90%
+  }
+
+  .menuitem {
+    
+  justify-content: center;
+  font-style: bold;
+  font-size: 100%;
+  font-family: 'Tiro Telugu', serif;
+  color: #fff;
+  height: 10%;
+  margin: 10%;
+  background-color: rgba(56, 53, 107, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6%;
+  width: 70%;
+  display: flex; /* add this */
+  align-items: center; /* add this */
+
+      
+
+  }
+
+  .menuitem:hover {
+    /*text-shadow: 0 0 10px #747474, 0 0 20px #696969, 0 0 30px #505050;*/
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+
+  }
+
+  .menulink {
+    size: 100%;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 150%;
+    justify-content: center;
+    background-color: transparent;
+    border: transparent;
+    font-family: 'Tiro Telugu', serif;
+  }
+
+  .mainpane {
+    grid-area: mainpane;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: 90%;
+    height: 90%;
+
+    background-color: rgba(35, 31, 114, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 2%;
+      
+  }
+
+  .mainwrapper {
+    
+    display: grid;
+    grid-template-areas: 'paneheader infotext sideinfo';
+    grid-template-rows: 25%;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr 2fr;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .paneheader, .infotext, .sideinfo {
+    color:#fff; 
+  }
+
+  .paneheader {
+    grid-area: paneheader;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-left: 5%;
+    padding-top: 2%;
+    font-size: 150%;
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: bold;
+  }
+
+  .infotext {
+    grid-area: infotext;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 20%;
+    font-family: 'Roboto', serif;
+    align-self: center;
+    justify-self: center;
+    background-position: center;
+    padding-bottom: 20%;
+
+  }
+
+  .sideinfo {
+    grid-area: sideinfo;
+    align-self: center top;
+    justify-self: center;
+    background-position: center;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url('images/beethoven2.jpg');
+    background-size: cover;
+    float: left;
+    width: 60%;
+    height: 90%
+  }
+
